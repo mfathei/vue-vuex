@@ -6,14 +6,14 @@
 </template>
 
 <script>
-    export default {
-        methods: {
-            increment() {
-                this.$emit('updated', 1);
-            },
-            decrement() {
-                this.$emit('updated', -1);
-            }
-        }
+export default {
+  methods: {
+    increment() {
+      this.$store.state.counter++;
+    },
+    decrement() {
+      this.$store.state.counter--;
     }
+  }
+};
 </script>
